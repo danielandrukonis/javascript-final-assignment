@@ -10,3 +10,40 @@ turėti bent minimalų stilių ir būti responsive;
 -------------------------------------------------------------------------- */
 
 const ENDPOINT = 'cars.json';
+const body = document.querySelector('#output');
+const div = document.createElement('div');
+// const state = {};
+
+const getBrandCarsAndModels = async () => {
+    try {
+        const response = await fetch(ENDPOINT);
+        const data = await response.json();
+        data.forEach((item) => {
+
+            const brandItem = item.brand;
+            const modelsItem = item.models;
+            console.log(brandItem, modelsItem);
+            
+           
+
+
+            const brand = document.createElement('div');
+            brand.setAttribute("class", "property-card-brand");
+            brand.textContent = brandItem;
+            body.append(brand);
+
+            const models = document.createElement('p');
+            models.setAttribute("class", "property-card-models");
+            models.textContent = modelsItem;
+            brand.append(models);
+
+            
+        });
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+
+getBrandCarsAndModels();
+

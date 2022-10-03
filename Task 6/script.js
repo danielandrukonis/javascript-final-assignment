@@ -27,9 +27,12 @@ function getUserAverageAge(users) {
 
 console.log(getUserAverageAge(users));
 
-const newArray = users.map(function (person) {
-  
-  return person.name;
-});
+function getUsersNames() {
+    
+  let people = users.map(people => people.name);
+  return people;
+    
+  }
+     
+console.log(getUsersNames());
 
-console.dir(newArray);

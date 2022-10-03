@@ -9,7 +9,7 @@
 
 /* Mobile first */
 .wrapper {
-  min-height: 100vh;
+  min-height: 50vh;
   min-width: calc(100vw - (100vw - 100%));
   background-color: #fec631;
 }
@@ -50,6 +50,14 @@ form {
   cursor: pointer;
   background-color: #000;
   color: #fff;
+}
+
+#output, p {
+  font-size: 1.1em;
+  min-height: 5vh;
+  min-width: calc(100vw - (100vw - 100%));
+  background-color: #fec631;
+
 }
 
 /* Tablet */
